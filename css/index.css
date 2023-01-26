@@ -17,6 +17,10 @@ h1{
     /* filter: invert(100%); */
     /* mix-blend-mode:exclusion; */
     color: white;
+    text-shadow: 0 0 5px black;
+}
+
+h1:hover{
     text-shadow: 0 0 8px fuchsia;
 }
 
@@ -144,6 +148,24 @@ li:active{
     z-index: 3000000;
 }
 
+.yr{
+    text-align: right;
+}
+
+.il, .ex{
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+#footfr{
+    color: rgb(172, 172, 172);
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
@@ -160,15 +182,11 @@ li:active{
     .foot{
         font-size: 30px;
     }
+    p{
+        font-size: 27px;
+    }
+
+    #footfr{
+        font-size: 22px;
+    }
   }
-
-.yr{
-    text-align: right;
-}
-
-.il, .ex{
-    width: 90%;
-    text-align: center;
-    justify-content: center;
-    padding: 15px;
-}

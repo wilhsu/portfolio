@@ -1,0 +1,342 @@
+a:visited, :link{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bigCont{
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.smallCont{
+    display: flex;
+    flex-direction: row;
+}
+
+#abtMe{
+    min-width: 20vw;
+    max-width: 20vw;
+    height: 100vh;
+    flex-direction: column;
+    border-right: solid 1px black;
+    padding: 15px;
+}
+
+#abtMe-intro > a:hover{
+    color: fuchsia;
+}
+
+#abtMe-intro{
+    position: relative;
+    z-index: 1000000000;
+
+    transition: opacity 1s ease-in-out;
+}
+
+#ultimateSquillabob{
+    filter: blur(20px);
+    position: fixed;
+    max-width: 20%;
+    bottom: 0;
+    z-index: -1000;
+
+    transition: filter 1s ease-in-out;
+}
+
+#wvh{
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 100px;
+    border: solid black 1px;
+    color: black;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+#wvh:hover{
+    background-color: black;
+    color: white;
+}
+
+#wvh:hover ~ #ultimateSquillabob{
+    filter: blur(0px);
+}
+
+#wvh:hover ~ #abtMe-intro{
+    opacity: 0;
+}
+
+#wvh:hover > a:hover{
+    color: white;
+}
+
+
+#mainCont{
+    display: flex;
+    flex-direction: column;
+
+    width: 80vw;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    border-bottom: solid 1px black;
+
+    font-size: 32px;
+}
+
+li{
+    padding: 15px;
+}
+
+li:hover > a, li:hover{
+    background-color: black;
+    color: white;
+}
+
+#projectSelection{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    flex-wrap: wrap;
+    border-bottom: solid 1px black;
+}
+
+.project{
+    margin: 5px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 100px;
+}
+
+.project:hover{
+    background-color: fuchsia;
+    color: white;
+    border: solid white 1px;
+}
+
+.project:hover > a{
+    color: white;
+}
+
+#instructions{
+    text-align: left;
+    width: 700px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+}
+
+#content{
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100vw;
+    height: 60vh;
+}
+
+#contentMobile{
+    display: none;
+}
+
+.thumbnail{
+    width: 700px;
+    height: auto;
+    position: absolute;
+    transform: translate(var(--x-position), var(--y-position)) scale(0.75);
+    opacity: 1;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.305);
+}
+
+@keyframes float{
+    from{transform: translate(0,0);}
+    to{transform:translate(0, +12px);}
+}
+
+@keyframes wiggle{
+    from{transform: skew(-3deg, -2deg);}
+    to{transform: skew(3deg, 2deg);}
+}
+
+#c{
+    position: fixed;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.509);
+}
+
+#abtMeMobile, .modal, #squillabobMobile{
+    display: none;
+}
+
+/* #squillabobMobile{
+    display: none;
+} */
+
+/* MOBILE */
+@media only screen and (max-width: 1150px) {
+    #abtMe{
+        display: none;
+    }
+
+    #wvhMobile{
+        font-size: 70px;
+        font-weight: 500;
+        letter-spacing: -5px;
+
+        text-align: left;
+        z-index: -1000000;
+
+        border: solid 1px black;
+        border-radius: 100px;
+        padding: 25px;
+
+        margin-left: 5px;
+    }
+
+    #abtMeMobile{
+        display: flex;
+        width: 100%;
+        /* justify-content: space-around; */
+    }
+
+    #squillabobMobile{
+        display: block;
+        position: fixed;
+        animation: float 1.5s infinite alternate ease-in-out;
+        /* box-shadow: 0 0 20px black; */
+        z-index: 5000;
+        width: 150px;
+        background-color: transparent;
+        border: none;
+        right: 0;
+        top: 0;
+
+        cursor: pointer;
+    }
+
+    #squillabobMobile > img{
+        width: 100%;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 50vh;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border-radius: 20px;
+        width: 80%;
+      }
+
+    .close {
+        color: #aaaaaa;
+        float: left;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    
+    #mainCont{
+        width: 100%;
+    }
+
+    #menu{
+        width: 100vw;
+        font-size: 25px;
+        flex-wrap: wrap;
+        position: fixed;
+        background-color: white;
+        
+        bottom: 0;
+        left: 0;
+        border-bottom: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.259);
+
+    }
+
+    #projectSelection, #instructions, #content{
+        display: none;
+    }
+
+    #contentMobile{
+        display: block;
+        width: 100vw;
+    }
+
+    .projectMobile{
+        border-radius: 20px;
+        width: (100% - 20px);
+        margin: 10px;
+        
+        transition: transform 1s ease-in-out,opacity .8s ease-in-out;
+    }
+
+    .thumbnailMobile{
+        border-radius: 20px;
+        width: 100%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.305);
+
+    }
+
+    .titleMobile{
+        width:fit-content;
+        color: white;
+        
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.408), black, rgba(0, 0, 0, 0.408));
+        background-position: 0px 0px;
+        padding: 10px;
+        text-align: left;
+        border-radius: 20px;
+        animation: bgmove 5s infinite alternate ease-in-out;
+    }
+
+    @keyframes bgmove{
+        from{background-position: 200px 400px;}
+        to{background-position: 400px 200px;}
+    }
+
+    #cMobile{
+        margin-top: 100px;
+        height: 300px;
+        color: rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+}

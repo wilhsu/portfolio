@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>test test xddd</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://use.typekit.net/wvm0mlo.css">
+        <style>
+            body{
+                /* background-color: #e40000; */
+                background-image: url(assets/littolsquigly.JPG);
+                margin: 0;
+            }
+
+            #big{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+            }
+
+            #header{
+                display: block;
+                position: sticky;
+                width: 100%;
+                top: 0;
+                z-index: -10000;
+            }
+
+            #logo{
+                justify-content: center;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                
+                width: 60%;
+                /* margin-bottom: -100px; */
+            }
+
+            nav{
+                display: flex;
+                width: 100%;
+                margin: 10px;
+
+                flex-direction: row;
+                justify-content: space-around;
+                font-size: 40px;
+                color: #e40000;
+            }
+
+            .navOptions{
+                padding: 15px;
+                border: solid 1.5px #e40000;
+            }
+
+            /* .projects{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px;
+                margin: 10px;
+
+                font-family: 'Franklin Gothic Medium', sans-serif;
+                font-weight: 100;
+                font-size: 80px;
+                text-align: center;
+                color: #e40000;
+
+                border: solid 1.5px #e40000;
+                border-radius: 10px;
+
+                transition: 0.5s ease-in;
+            } */
+
+            #body{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /* justify-content: space-evenly; */
+                justify-content: space-between;
+            }
+
+            .projects{
+                display: flex;
+                background-color: #e40000;
+                /* padding: 10px; */
+                padding: 0px;
+                /* margin: 2px; */
+                height: 400px;
+            }
+
+            .thumbnail{
+                width: 100%;
+                height: auto;
+                border-radius: 50px;
+            }
+
+            .text{
+                position: absolute;
+                font-size: 60px;
+                font-family: "forma-djr-display", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                /* z-index: 10000; */
+                color: white;
+                
+                width: inherit;
+                height: auto;
+                text-align: center;
+
+            }
+
+            .thumbnail:hover{
+                border-radius: 200px;
+                /* filter: blur(10px); */
+                color: #e40000;
+            }
+
+            /* .projects:hover{
+                background-size: contain;
+                border-radius: 100px;
+                color: transparent;
+                border: 0px solid #e40000;
+                text-shadow: 0 0 20px #e40000;
+            }
+
+            #project1:hover{
+                background-image: url(assets/P001crystalgoblet/crystalgoblet.gif);
+                background-color: black;
+            }
+
+            #project2:hover{
+                background-image: url(assets/P005globular/globular.gif);
+            }
+
+            #project5:hover{
+                background-image: url(assets/P006poorimage/finals/contrastTestFinal.gif);
+            } */
+
+            #footer{
+                position: sticky;
+                bottom: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+
+                font-size: 30px;
+                font-family: "forma-djr-display", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                background-color: white;
+                height: 60px;
+                color: #e40000;
+                margin: 0;
+                border: #e40000 solid 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="big">
+            <div id="header">
+                <!-- WILLIAM-VERSACE-HSU -->
+                <img id="logo" src="assets/wilverhsuLOGO.png">
+                <!-- <nav>
+                    <div class="navOptions">print</div>
+                    <div class="navOptions">websites</div>
+                    <div class="navOptions">motion</div>
+                    <div class="navOptions">forfun</div>
+                </nav> -->
+            </div>
+
+            <!-- <div id="body" class="list">
+                <div class="projects" id="project1">
+                    <span>Everything</span>
+                    <span>But</span>
+                    <span>The</span>
+                    <span>Crystal</span>
+                    <span>Goblet</span>
+                </div>
+
+                <div class="projects" id="project2">
+                    <div>Globular</div>
+                    <div>Regular</div>
+                    <div>Typeface</div>
+                </div>
+
+                <div class="projects" id="project3">
+                    <div>Calvin</div>
+                    <div>Klein</div>
+                    <div>Packaging</div>
+                    <div>Generator</div>
+                </div>
+
+                <div class="projects" id="project4">
+                    <div>Fashion</div>
+                    <div>Revolution</div>
+                    <div>Week</div>
+                </div>
+
+                <div class="projects" id="project5">
+                    <div>In</div>
+                    <div>Defense</div>
+                    <div>Of</div>
+                    <div>The</div>
+                    <div>Poor</div>
+                    <div>Image</div>
+                </div>
+
+                <div class="projects" id="project6">
+                    <div>Wutz</div>
+                    <div>Ur</div>
+                    <div>Y2K</div>
+                    <div>Ring</div>
+                    <div>?</div>
+                </div>
+            </div> -->
+            <div id="body" class="list">
+                <div class="projects">
+                    <img class="thumbnail" src="assets/P001crystalgoblet/hsu_william_everythingbutthecrystalgoblet_03.JPG">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail" src="assets/P005globular/globularnotebookk.jpg">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail" src="assets/P002ccenergy/energybillboardmockup2.png">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail" src="assets/P007hotdog/hotdog.jpg">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail" src="assets/P003frw/frwmockupALL.jpg">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail" src="assets/P004szine/szines.png">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail">
+                </div>
+
+                <div class="projects">
+                    <img class="thumbnail">
+                </div>
+
+            </div>
+
+            <div id="footer">
+                <div>email</div>
+                <div>instagram</div>
+                <div>github</div>
+                <div>are.na</div>
+                <div>linkedin</div>
+            </div>
+        </div>
+        
+        <script>
+            // let myDiv = document.querySelector('');
+        </script>
+    </body>
+</html>

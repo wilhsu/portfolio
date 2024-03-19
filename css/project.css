@@ -1,0 +1,366 @@
+a:visited, :link{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    box-sizing: border-box;
+
+    margin: 0;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bigCont{
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+.smallCont{
+    display: flex;
+    flex-direction: row;
+}
+
+#abtMe{
+    min-width: 20vw;
+    max-width: 20vw;
+    height: 100vh;
+    flex-direction: column;
+    border-right: solid 1px black;
+    padding: 15px;
+
+    position: sticky;
+    top: 0;
+}
+
+#abtMe-intro{
+    position: relative;
+    z-index: 1000000000;
+
+    transition: opacity 1s ease-in-out;
+}
+
+#ultimateSquillabob{
+    filter: blur(20px);
+    position: fixed;
+    max-width: 20%;
+    bottom: 0;
+    z-index: -1000;
+
+    transition: filter 1s ease-in-out;
+}
+
+#wvh{
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 100px;
+    border: solid black 1px;
+    color: black;
+    /* transition: background-color, color 1s ease-in-out; */
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+#wvh:hover, #wvh:hover > a{
+    background-color: black;
+    color: white;
+}
+
+#wvh:hover ~ #ultimateSquillabob{
+    filter: blur(0px);
+}
+
+#wvh:hover ~ #abtMe-intro{
+    opacity: 0;
+}
+
+#wvhMobile{
+    display: none;
+}
+
+#mainCont{
+    display: flex;
+    flex-direction: column;
+
+    width: 80vw;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    border-bottom: solid 1px black;
+
+    font-size: 32px;
+}
+
+li{
+    padding: 15px;
+}
+
+li:hover > a, li:hover{
+    background-color: black;
+    color: white;
+}
+
+#projectSelection{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    flex-wrap: wrap;
+    border-bottom: solid 1px black;
+}
+
+.project{
+    margin: 5px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 100px;
+}
+
+.project:hover{
+    background-color: fuchsia;
+    color: white;
+    border: solid white 1px;
+}
+
+.project:hover > a{
+    color: white;
+}
+
+#projectContent{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    /* border-left: solid 1px black; */
+    width: 100% - 40px;
+    height: 50vh;
+    padding: 20px;
+}
+
+.imgGallery{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.imgGallery > img, video{
+    margin: 15px;
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.305);
+}
+
+
+.projectDescription{
+    margin: 15px;
+    margin-right: 70px;
+    margin-bottom: 200px;
+    font-size: 24px;
+}
+
+.linktosite, .linktosite>a:link{
+    color: fuchsia;
+    border: solid fuchsia 1px;
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+}
+
+#contentMobile{
+    display: none;
+}
+
+.thumbnail{
+    width: 700px;
+    height: auto;
+    position: absolute;
+    transform: translate(var(--x-position), var(--y-position)) scale(0.75);
+    opacity: 1;
+}
+
+@keyframes float{
+    from{transform: translate(0,0);}
+    to{transform:translate(+10px, +10px);}
+}
+
+@keyframes wiggle{
+    from{transform: skew(-3deg, -2deg);}
+    to{transform: skew(3deg, 2deg);}
+}
+
+.tags{
+    /* color: rgba(0, 0, 0, 0.25); */
+    color: fuchsia;
+    margin: 15px;
+    text-align: center;
+}
+
+/* #topBtn{
+    width: 80px;
+    height: 80px;
+    border: fuchsia solid 1px;
+    color: fuchsia;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+#topBtn:hover{
+    color: white;
+    background-color: fuchsia;
+} */
+
+#c{
+    position: fixed;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.509);
+}
+
+#thisTitleMobile, #cMobile{
+    display: none;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 1000px) {
+    #menu{
+        width: 100vw;
+        font-size: 25px;
+        flex-wrap: wrap;
+        position: fixed;
+        background-color: white;
+        z-index: 2000;
+        
+        bottom: 0;
+        left: 0;
+        border-bottom: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.259);
+
+    }
+
+    #wvhMobile{
+        display: block;
+        font-size: 16px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 100px;
+        border: solid black 1px;
+        color: white;
+        background-color: black;
+        letter-spacing: -1px;
+        margin: 10px;
+    }
+
+    #wvhMobile>a{
+        color: white;
+    }
+
+    #projectSelection, #instructions, #content, #abtMe{
+        display: none;
+    }
+
+    #contentMobile{
+        display: block;
+        width: 100vw;
+    }
+
+    .thumbnailMobile{
+        border-radius: 20px;
+        width: 100%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.305);
+
+    }
+
+    #thisTitleMobile{
+        width:fit-content;
+        color: black;
+        font-size: 50px;
+        display: block;
+        margin: 10px;
+        line-height: 40px;
+        position: sticky;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        border: solid 1px black;
+        border-radius: 100px;
+    }
+
+    @keyframes bgmove{
+        from{background-position: 200px 400px;}
+        to{background-position: 400px 200px;}
+    }
+
+    .bigCont{
+        margin: 0;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #mainCont{
+        width: 100vw;
+        height: 100vh;
+
+        /* overflow: hidden; */
+    }
+
+    #projectContent{
+        display: flex;
+        position: absolute;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+
+    .projectDescription{
+        /* display: block; */
+        height: auto;
+        width: 90vw;
+        position: relative;
+        margin: 20px;
+        font-size: 24px;
+    }
+
+    .imgGallery{
+        width: 100vw;
+        height: auto;
+        position: relative;
+        margin-bottom: 200px;
+    }
+
+    #cMobile{
+        /* margin-left: auto;
+        margin-right: auto; */
+        height: 200px;
+        color: rgba(0, 0, 0, 0.3);
+        text-align: right;
+        position: fixed;
+        display: block;
+        float: right;
+        width: 100vw;
+        top: 15px;
+        right: 15px;
+        z-index: -10000;
+        mix-blend-mode: multiply;
+    }
+}
